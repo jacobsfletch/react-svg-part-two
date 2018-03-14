@@ -17,14 +17,79 @@ body {
 	margin: auto;
 }
 
+.chart-header {
+	background-color: white;
+	height: 2rem;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	margin: auto;
+	margin-bottom: 1rem;
+	list-style: none;
+	justify-content: space-between;
+	box-shadow: 0 0 50px rgba(0, 0, 0, .1);
+	overflow-x: scroll;
+}
+
+.menu-item button {
+	font-size: 1rem;
+	font-family: sans-serif;
+	color: darkslategray;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+	margin-right: 1rem;
+	display: flex;
+	align-items: center;
+	border: 0;
+	cursor: pointer;
+	border-radius: 8px;
+	padding: .5rem 1rem;
+	background-color: transparent;
+}
+
+.menu-item button::before {
+	content: '';
+	display: block;
+	box-sizing: border-box;
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+	margin-right: .5rem;
+}
+
+.menu-item button:hover { background-color: whitesmoke; }
+
+.menu-item button:focus { outline: none; }
+
+.menu-item.active button { color: white; }
+
+.menu-item:first-child button::before { background: linear-gradient(133deg, #007285, #31AEA1); }
+.blue .menu-item.active button { background: linear-gradient(133deg, #007285, #31AEA1); }
+.blue .chart-body { background: linear-gradient(133deg, #007285, #31AEA1); }
+
+.menu-item:nth-child(2) button::before { background: linear-gradient(133deg, #fa7161, #f9c62d); }
+.orange .menu-item.active button { background: linear-gradient(133deg, #fa7161, #f9c62d); }
+.orange .chart-body { background: linear-gradient(133deg, #fa7161, #f9c62d); }
+
+.menu-item:nth-child(3) button::before { background: linear-gradient(133deg, #FA7161, #fb877a); }
+.red .menu-item.active button { background: linear-gradient(133deg, #FA7161, #fb877a); }
+.red .chart-body { background: linear-gradient(133deg, #FA7161, #fb877a); }
+
+.menu-item:last-child button::before { background: linear-gradient(133deg, #31AEA1, #37c2b3); }
+.green .menu-item.active button { background: linear-gradient(133deg, #31AEA1, #37c2b3); }
+.green .chart-body { background: linear-gradient(133deg, #31AEA1, #37c2b3); }
+
+.menu-item.active button::before { background: white !important; }
+
 .chart-body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	height: 5rem;
 	padding: 4rem 1rem;
-	background: linear-gradient(133deg, #fa7161, #f9c62d);
 	border-radius: 8px;
+	box-shadow: 0 0 50px rgba(0, 0, 0, .1);
 }
 
 svg {
