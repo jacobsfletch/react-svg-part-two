@@ -44,7 +44,7 @@ body {
 	border: 0;
 	cursor: pointer;
 	border-radius: 8px;
-	padding: .5rem 1rem;
+	padding: .5rem 1.5rem;
 	background-color: transparent;
 }
 
@@ -55,7 +55,7 @@ body {
 	width: 8px;
 	height: 8px;
 	border-radius: 100%;
-	margin-right: .5rem;
+	margin-right: 1rem;
 }
 
 .menu-item button:hover { background-color: whitesmoke; }
@@ -81,6 +81,7 @@ body {
 .green .chart-body { background: linear-gradient(133deg, #31AEA1, #37c2b3); }
 
 .menu-item.active button::before { background: white !important; }
+.menu-item:last-child button { margin-right: 0; }
 
 .chart-body {
 	display: flex;

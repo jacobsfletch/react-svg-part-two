@@ -13,19 +13,19 @@ class Chart extends Component {
 		this.state = {
 			menu: [
 				{
-					label: "One",
+					label: "Graph One",
 					active: false,
 					array: [5, 30, -5, -10, 15, -15, 20, 5, 8, -12, -20, 2, 3, -5, 8, -2, 22, -30, -22]
 				}, {
-					label: "Two",
+					label: "Graph Two",
 					active: true,
 					array: [30, 25, 35, 15, 25, 17, 20, -5, 12, 7, -28, 2, -30, -20, -22, -2, -27, -30, -35]
 				}, {
-					label: "Three",
+					label: "Graph Three",
 					active: false,
 					array: [-12, -35, -28, -30, -7, -1, -22, 16, 2, -5, 4, -19, -2, 15, 10, 25, 30, 28, 35]
 				}, {
-					label: "Four",
+					label: "Graph Four",
 					active: false,
 					array: [5, 12, -2, 8, 3, -12, 20, 5, 8, -12, -20, -9, 5, 12, -1, -2, 22, -30, 5]
 				}
