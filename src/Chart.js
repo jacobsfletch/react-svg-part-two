@@ -13,19 +13,19 @@ class Chart extends Component {
 		this.state = {
 			menu: [
 				{
-					label: "Graph One",
+					label: "Missed Payment",
 					active: false,
 					array: [5, 30, -5, -10, 15, -15, 20, 5, 8, -12, -20, 2, 3, -5, 8, -2, 22, -30, -22]
 				}, {
-					label: "Graph Two",
+					label: "Conversions",
 					active: true,
 					array: [30, 25, 35, 15, 25, 17, 20, -5, 12, 7, -28, 2, -30, -20, -22, -2, -27, -30, -35]
 				}, {
-					label: "Graph Three",
+					label: "Churn",
 					active: false,
 					array: [-12, -35, -28, -30, -7, -1, -22, 16, 2, -5, 4, -19, -2, 15, 10, 25, 30, 28, 35]
 				}, {
-					label: "Graph Four",
+					label: "Revenue",
 					active: false,
 					array: [5, 12, -2, 8, 3, -12, 20, 5, 8, -12, -20, -9, 5, 12, -1, -2, 22, -30, 5]
 				}
@@ -53,7 +53,6 @@ class Chart extends Component {
 		const newState = [...this.state.menu]
 		for(var i = 0; i < newState.length; i++) {
 			if(newState[i].active) {
-				this.lastArrayY = newState[i].array
 				newState[i].active = false
 			}
 		}
