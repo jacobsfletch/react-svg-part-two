@@ -8,7 +8,7 @@ class Chart extends Component {
 	constructor(props) {
 		super(props);
 		this.handleClick = this.handleClick.bind(this);
-		this.arrayX = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000]
+		this.arrayX = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000];
 		this.currentIndex = 1;
 		this.state = {
 			menu: [
@@ -34,12 +34,12 @@ class Chart extends Component {
 	}
 
 	componentWillMount() {
-		this.generatePolylineArray()
+		this.generatePolylineArray();
 	}
 
 	generatePolylineArray() {
 		let polyline = '';
-		const currentArrayY = this.state.menu[this.currentIndex].array
+		const currentArrayY = this.state.menu[this.currentIndex].array;
 		this.arrayX.map((coordX, i) => {
 			return (this.arrayX.length === i) ? polyline += coordX : polyline += `${coordX},${currentArrayY[i]} `;
 		})
@@ -47,18 +47,18 @@ class Chart extends Component {
 	}
 
 	handleClick(key) {
-		this.currentIndex = key
-		this.generatePolylineArray()
+		this.currentIndex = key;
+		this.generatePolylineArray();
 
-		const newState = [...this.state.menu]
-		for(var i = 0; i < newState.length; i++) {
-			if(newState[i].active) {
-				newState[i].active = false
+		const newState = [...this.state.menu];
+		for (var i = 0; i < newState.length; i++) {
+			if (newState[i].active) {
+				newState[i].active = false;
 			}
 		}
-		newState[key].active = true
+		newState[key].active = true;
 
-		this.setState({newState})
+		this.setState({newState});
 	}
 
 	render() {
